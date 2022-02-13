@@ -1,14 +1,13 @@
 import React from 'react';
 import { Board } from './components/Board';
-import { DndProvider } from 'react-dnd';
-import { HTML5Backend } from 'react-dnd-html5-backend';
+import { DragDropContext } from 'react-beautiful-dnd';
 
 
 const App = () => {
     return (
-        <DndProvider backend={HTML5Backend}>
+        <DragDropContext onDragEnd={() => {}}>
             <Board/>
-        </DndProvider>
+        </DragDropContext>
     );
 };
 
